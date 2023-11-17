@@ -19,10 +19,11 @@ export default function ToDoForm({ onAddTask }) {
         value={newTask}
         onChangeText={setNewTask} 
       />
-      <Button title="Add" onPress={handleAddTask} />
+      <Button title="Add" onPress={handleAddTask} color="#D41267" />
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   form: {
     flexDirection: 'row',
@@ -30,6 +31,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 20,
     marginTop: 20,
+    backgroundColor: '#F8F8F8',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.2,
+    shadowRadius: 1,
   },
   input: {
     flex: 1,
@@ -38,5 +45,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginRight: 10,
+    borderRadius: 5,
   },
 });
