@@ -5,13 +5,12 @@ export default function ToDoList({ tasks }) {
   return (
     <ScrollView style={styles.container}>
       {tasks.map((task, index) => (
-        <Pressable 
+        <Pressable
           key={index}
           style={({ pressed }) => [
-            { backgroundColor: pressed ? '#E0E0E0' : '#FFF' },
-            styles.task
-          ]}
-        >
+            { backgroundColor: pressed ? '#DC8686' : '#7ED7C1' },
+            styles.task,
+          ]}>
           <View>
             <Text style={styles.taskText}>{task}</Text>
           </View>
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
     padding: 15,
     marginVertical: 5,
     marginHorizontal: 10,
-    backgroundColor: '#D41267 ',
+    backgroundColor: '#B06161',
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
@@ -39,6 +38,6 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
-    color: '#FAFA08',
+    color: '#FFFFFF',
   },
 });

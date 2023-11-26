@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, TextInput, Button } from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, View, TextInput, Button} from 'react-native';
 
-export default function ToDoForm({ onAddTask }) {
+export default function ToDoForm({onAddTask}) {
   const [newTask, setNewTask] = useState('');
 
   const handleAddTask = () => {
-    if (newTask) { 
+    if (newTask) {
       onAddTask(newTask);
       setNewTask('');
     }
@@ -17,7 +17,7 @@ export default function ToDoForm({ onAddTask }) {
         style={styles.input}
         placeholder="Add a new task..."
         value={newTask}
-        onChangeText={setNewTask} 
+        onChangeText={setNewTask}
       />
       <Button title="Add" onPress={handleAddTask} color="#D41267" />
     </View>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F8F8F8',
     borderRadius: 10,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
+    shadowOffset: {width: 0, height: 1},
     shadowOpacity: 0.2,
     shadowRadius: 1,
   },
